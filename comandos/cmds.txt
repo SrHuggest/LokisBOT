@@ -1,0 +1,23 @@
+    if (cmd === `${prefix}tempo`) {
+
+        weather.find({ search: args.join(" "), degreeType: 'C' }, function (err, result) {
+            if (err) message.channel.send(err);
+            if (result === undefined || result.length === 0) {
+                message.channel.send('**Por favor coloque um local!**')
+                return;
+            }
+            var current = result[0].current;
+            var location = result[0].location;
+            const embed = new Discord.RichEmbed()
+                .setDescription(`**${current.skytext}**`)
+                .setAuthor(`🍃 Tempo para ${current.observationpoint}`)
+                .setThumbnail(current.imageUrl)
+                .setColor('0x00AE86')
+                .addField('⌚ Fuso horário:', `UTC${location.timezone}`, true)
+                .addField('🍃 Tipo de Graus:', location.degreetype, true)
+                .addField('☀️ Temperatura:', `${current.temperature} °C`, true)
+                .addField('🚢 Maxima:', `${current.feelslike} °C`, true)
+                .addField('🍃 Ventos:', current.winddisplay, true)
+                .addField('❄️ Umidade:', `${current.humidity}%`, true)
+            message.channel.send({ embed });
+        })
