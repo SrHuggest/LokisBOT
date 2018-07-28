@@ -1,0 +1,66 @@
+//bot.on("message", function(message) {
+//    if (message.author.equals(bot.user)) return;
+//    
+//    if (message.content.startsWith(prefix)) return;
+//
+//    var args = message.content.substring(prefix.length).split();
+//
+//    switch (args[0]) {
+//
+//        case ">!invite":
+//            var convite = "https://discordapp.com/api/oauth2/authorize?client_id=467689941669904394&permissions=8&scope=bot"
+//            var embed = new Discord.RichEmbed()
+//                .setAuthor("LokisBOT")
+//                .setTitle("Me convide para seu servidor")
+//                .addField("Convite:", convite);
+//            message.channel.sendMessage(embed);
+//            break;
+//                case ">!meconvide":             
+//            var convite = "https://discordapp.com/api/oauth2/authorize?client_id=467689941669904394&permissions=8&scope=bot"
+//            var embed = new Discord.RichEmbed()
+//                .setAuthor("LokisBOT")
+//                .setTitle("Me convide para seu servidor")
+//                .addField("Convite:", convite);
+//            message.channel.sendMessage(embed);
+//            break;
+//        case ">!help":
+//        let helping2 = ["**Administração**", "1- Comando: >!ban (@user) (motivo)", "2- Comando: >!kick (@user) (motivo)", "3- Comando: >!report (@user)(motivo)", "4- Comando: >!serverinfo Veja tudo sobre o servidor.", "5- Comando: >!botinfo Veja tudo sobre o bot.", "**Interação**", "1- Comando: >!beijar (@user) Faz com que você beija.", "2- Comando: >!samgenerator Gera memes automatico.", "4- Comando: >!atirar (@user) Mate seu coleguinha", "5- Comando: >!google (sua pesquisa)", "6- Comando: >!youtube (sua pesquisa)", "7- Comando: >!ligar (exemplo: 190)", "8- Comando: >!abracar (@user)", "9- >!shippar (@user) (@user2) Shippe alguem.", "**Para não se molhar**", "1- Comando: >!tempo (cidade/estado/pais)"];
+//        var embed = new Discord.RichEmbed()
+//            .setDescription(helping2)
+//            .setColor("BLUE")
+//        message.channel.sendMessage(embed);
+//        message.channel.sendMessage(`${message.author}`)
+//        break;
+//        case ">!ajuda":
+//        let helping = ["**Administração**", "1- Comando: >!ban (@user) (motivo)", "2- Comando: >!kick (@user) (motivo)", "3- Comando: >!report (@user)(motivo)", "4- Comando: >!serverinfo Veja tudo sobre o servidor.", "5- Comando: >!botinfo Veja tudo sobre o bot.", "**Interação**", "1- Comando: >!beijar (@user) Faz com que você beija.", "2- Comando: >!samgenerator Gera memes automatico.", "4- Comando: >!atirar (@user) Mate seu coleguinha", "5- Comando: >!google (sua pesquisa)", "6- Comando: >!youtube (sua pesquisa)", "7- Comando: >!ligar (exemplo: 190)", "8- Comando: >!abracar (@user)", "9- >!shippar (@user) (@user2) Shippe alguem.", "**Para não se molhar**", "1- Comando: >!tempo (cidade/estado/pais)"];
+//        var embed = new Discord.RichEmbed()
+//            .setDescription(helping)
+//            .setColor("BLUE")
+//        message.channel.sendMessage(embed);
+//        message.channel.sendMessage(`${message.author}`)
+//        break;
+//       case ">!ping":
+//            let bicon = bot.user.displayAvatarURL;
+//            var embed = new Discord.RichEmbed()
+//                .addField("PING:", Math.round(bot.ping))
+//                .addField("SHARD:", bot.shard + 2)
+//                .setColor("GREEN")
+//                .setDescription("**O PING MOSTRADO AQUI É O DO BOT**")
+//                .setThumbnail(bicon)
+//            message.channel.sendMessage(embed);
+//            break;
+//        case ">!lokicoins":
+//            var embed = new Discord.RichEmbed()
+//                .setTitle("LokiCoins")
+//                .addField("Você tem:", `**0** LokiCoins, isso por que o comando está em manutenção 🔨`)
+//            message.channel.sendMessage(embed);
+//            message.channel.sendMessage(`${message.author}`)
+//            break;
+//        case ">!daily":
+//            var embed = new Discord.RichEmbed()
+//                .setTitle("Daily LokiCoins")
+//                .addField("Lokicoins ganhos:", "**0**")
+//                .setColor("RED")
+//                message.channel.sendMessage(embed);
+//                message.channel.sendMessage(`${message.author}`)
+//            break;
