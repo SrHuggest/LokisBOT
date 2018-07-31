@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const Util = require('discord.js');
 const utils = require('bot-utils')
-const TOKEN = "token."
-const botconfig = require("./botconfig.json");
+const TOKEN = "NDY3Njg5OTQxNjY5OTA0Mzk0.DjpyNg.a4I4ALZDzURp0nJH3zV-A7c-RhY"
+const prefix = require("./prefix.json");
 const xp = require("./xp.json")
 const weather = require('weather-js');
 const ytdl = require('ytdl-core');
@@ -48,7 +48,7 @@ bot.on("ready", function () {
 
 //Funções do bot/comandos.
 bot.on("guildCreate", async guild => {
-    console.log(`${guild.name} começou a usar o bolacha kkk`)
+    console.log(`${guild.name} começou a usar o LokisBOT.`)
 
 });
 
@@ -100,20 +100,71 @@ bot.on('guildMemberAdd', async member => {
     channel.send(`${member} `, attachment);
 });
 
-bot.on("message", async message => {
+bot.on("message", message => {
+    if(message.content.includes('<@467689941669904394>')){
+  var embedz = new Discord.RichEmbed()
+  .setAuthor('Oi, perdidinho?', message.author.displayAvatarURL)
+  .setColor(message.guild.member(message.author.id).displayHexColor)
+  .setDescription('Eu vi que você está meio perdido em prefixs, minha prefix é **>!**')
+  .setTimestamp()
+  .setFooter('LokisBOT para discord, brasileiro.')
+  message.channel.send({embed : embedz})
+  }
+  if(message.channel.id == 460198827140579350) { 
+
+    message.react(':1532794709274:472800683842732032')
+    message.react(':1532794695151:472800690276925440')
+    message.react(':1532794681072:472401322939777024')
+  }    
+  
+    if(!message.guild) return;
     if (message.author.bot) return;
-    if (message.channel.type === "dm") return;
+    if (!message.content.startsWith(prefix.PREFIX)) return;
 
-    let prefix = botconfig.prefix;
-    let messageArray = message.content.split(" ");
-    let cmd = messageArray[0];
-    let args = messageArray.slice(1);
-
-    let commandfile = bot.commands.get(cmd.slice(prefix.length));
-    if (commandfile) commandfile.run(bot, message, args);
-
-
+   //Anti-Comando
+  
+   let command = message.content.split(" ")[0];
+   command = command.slice(prefix.PREFIX.length);
+  
+  
+    let args = message.content.split(" ").slice(1);
     
-});
+  
+  
+    try {
+  if(cooldown.has(message.author.id)) {
+  return message.reply(` ✋ | Você precisa aguardar **${cdseconds}s** para utilizar outro comando.`).then(msg => {
+     setTimeout(() => {
+  msg.delete()
+     }, 5000)
+  })
+  }
+      let commandFile = require(`./comandos/${command}.js`);
+      commandFile.run(bot, message, args);
+    cooldown.add(message.author.id)
+     setTimeout(() => {
+  cooldown.delete(message.author.id)
+     }, cdseconds * 1000)
+      var texto = ['2', '1', '3', '10', '12', '17', '23', '230', 'fj', 'dfsuih', 'ghnfiu']
+   const random = texto[Math.floor(Math.random() * texto.length)];
+   const Discord2 = require('discord.js');
+  var embed1 = new Discord2.RichEmbed()
+  
+  .setDescription('Vejo que está gostando de meus comandos, se ainda não divulgou o ***Lokis*** para seus amigos. Peço que por favor, me divulgue, isso ajuda bastante para me manter online.\n**|** [Clique aqui para me adicionar em algum servidor.](https://discordapp.com/api/oauth2/authorize?client_id=467689941669904394&permissions=36826310&scope=bot)\n**|** Discord Bots: [Clique aqui!](https://discordbots.org/bot/467689941669904394)')
+  .setTimestamp()
+  .setColor('RED')
+  .setFooter('Lokis, um bot totalmente brasileiro.', bot.user.avatarURL)
+  if(random == '2') return message.channel.send({embed : embed1})
+    } catch (err) {
+  if (!message.content.startsWith(prefix.PREFIX)) return;
+  message.channel.send('❌ **|** Este comando pode não estar no meu banco de dados. 😓 Me Desculpe.').then(message => {
+     setTimeout(() => {
+  message.delete()
+     }, 1000)
+  })
+      console.error(err);
+    }
+  })
+
 
 bot.login(TOKEN)
