@@ -4,7 +4,6 @@ const utils = require('bot-utils')
 const TOKEN = process.env.TOKEN
 const prefix = require("./prefix.json");
 const xp = require("./xp.json")
-const weather = require('weather-js');
 const ytdl = require('ytdl-core');
 const ytSearch = require( 'yt-search' );
 const fs = require("fs");
