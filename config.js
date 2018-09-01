@@ -1,1 +1,0 @@
-exports.GOOGLE_API_KEY = 'AIzaSyAeIyG8gYJsBOwmjwbBmCBaN54saMUEPXM'
