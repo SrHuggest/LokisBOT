@@ -6,7 +6,7 @@ module.exports.run = async (client,message,args) => {
 	totalSeconds %= 3600; 
 	let minutes = Math.floor(totalSeconds / 60); 
 	let seconds = totalSeconds % 60;
-	message.channel.send(`current uptime ${hours}hours:${minutes}minutes`)
+	message.channel.send(`🛰️ Estou transmitindo a ${hours} Horas: ${minutes} Minutos`)
 }
 
 
