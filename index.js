@@ -1,9 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = require("./prefix.json");
-const TOKEN = process.env.TOKEN
+const TOKEN = "NDc3MjM5NDQzMjM3ODk2MTky.Dm2zPQ.4Uw1fuZcaPxHayYu8gBJossMYzY"
 const fs = require('fs');
-const token = process.env.token;
 
 bot.on('ready', () => {
 
@@ -16,7 +15,14 @@ bot.on('ready', () => {
     }, 20000);
 });
 
+bot.on('guildMemberAdd', async member => {
 
+  const channel = member.guild.channels.find(ch => ch.name === 'lo-entrada');
+  if (!channel) return;
+
+
+  channel.send(`${member}, Estou feliz que tenha entrado :wink:`);
+});
 
 bot.on("message", message => {
 
