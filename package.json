@@ -11,6 +11,7 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2",
     "fs": "0.0.1-security",
+    "jimp": "^0.4.0",
     "moment": "^2.22.2",
     "ms": "^2.1.1",
     "opusscript": "0.0.6",
@@ -18,6 +19,7 @@
     "request": "^2.88.0",
     "snekfetch": "^4.0.4",
     "util": "^0.11.0",
+    "weather-js": "^2.0.0",
     "yt-search": "^0.1.4",
     "ytdl-core": "^0.20.4"
   }
