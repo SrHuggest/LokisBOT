@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-module.exports.run = async (client,message,args) => {
+module.exports.run = async (bot,message,args) => {
 let usuario = message.mentions.users.first() ? message.mentions.users.first() : message.author
 let coins = require("../coins.json");
 if(!coins[usuario.id]){
@@ -30,7 +30,7 @@ if(!reps[usuario.id]) reps[usuario.id] = {
 reps: 0
 }; 
 let verreps = reps[usuario.id].reps;
-var desenvolvedores = ["411361942071148545"]
+var desenvolvedores = ["311114872911822850"]
 let back = require("../back.json");
  if(!back[usuario.id]) back[usuario.id] = {
     back: "https://i.imgur.com/RcBGhPW.png"
