@@ -24,6 +24,15 @@ bot.on('guildMemberAdd', async member => {
   channel.send(`${member}, Estou feliz que tenha entrado :wink:`);
 });
 
+bot.on('guildMemberAdd', async member => {
+
+  const channel = member.guild.channels.find(ch => ch.id === '488345499808825367');
+  if (!channel) return;
+
+
+  channel.send(`${member}, Acabou de entrar. Seja bem vindo meu compatriota! Espero que curta nosso servidor ;D :wink:`);
+});
+
 bot.on("message", message => {
 
   if(!message.guild) return;
