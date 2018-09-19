@@ -32,8 +32,8 @@ bot.on('guildMemberAdd', async member => {
 
   channel.send(`${member}, Acabou de entrar. Seja bem vindo meu compatriota! Espero que curta nosso servidor ;D :wink:`);
 });
-client.on('guildMemberAdd', member => {
-       let roleee = "autorole": 0
+bot.on('guildMemberAdd', member => {
+
        let autorole = JSON.parse(fs.readFileSync("./autorole.json", "utf8"));
        if (!autorole[member.guild.id]) {
             autorole[member.guild.id] = {
