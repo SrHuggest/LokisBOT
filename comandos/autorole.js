@@ -1,7 +1,7 @@
 
 
 const Discord = require("discord.js");
-const fs = require("fs);"
+const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("Vc não pode fazer isso.");
@@ -27,4 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.reply(`Autorole setado para o cargo <@&${role.id}>`);
   }
-}
+
+module.exports.help = {
+    name: "avatar"
+  }
