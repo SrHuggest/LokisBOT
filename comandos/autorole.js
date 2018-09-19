@@ -1,6 +1,9 @@
-const fs = require("fs");
 
-exports.run = async (bot, message, args) => {
+
+const Discord = require("discord.js");
+const fs = require("fs);"
+
+module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("Vc não pode fazer isso.");
   let autorole = JSON.parse(fs.readFileSync("./autorole.json", "utf8"));
   if (!args[0]) {
