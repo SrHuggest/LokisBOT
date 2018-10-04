@@ -4,6 +4,7 @@ const errors = require("../utils/errors.js");
 module.exports.run = async (bot, message, args) => {
 
     let proerdUser = message.guild.member(message.mentions.users.first());
+if(!proerdUser) return message.channel.send(':x: **|** Mencione o usuário para utilizar o comando')
     const proerd = new Discord.RichEmbed()
         .setTitle("PROERDDDD É O PROGRAMA...")
         .setDescription(`${message.author}, falou que você ${proerdUser} precisa fazer proerde`)
