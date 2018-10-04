@@ -7,8 +7,9 @@ module.exports.run = async (bot, message, args) => {
 
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if (!rUser) return message.channel.send("Você usou o comando incorretamente: use >!report @user (motivo)");
+        
         let rreason = args.join(" ").slice(22);
-
+if(!rreason) message.reply("Motivo")
         let reportEmbed = new Discord.RichEmbed()
             .setAuthor("Report - Lokis", message.author.displayAvatarURL)
             .setColor("RED")
@@ -16,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             .addField("Quem reportou:", `${message.author} | ${message.author.id}`)
             .addField("Data:", message.createdAt)
             .addField("Motivo:", rreason);
-        let reportschannel = message.guild.channels.find(`name`, "reports");
+        let reportschannel = message.guild.channels.find(`name`, "lo-punicoes");
         if (!reportschannel) return message.channel.send("Não foi possível encontrar o canal #reports.");
 
 
