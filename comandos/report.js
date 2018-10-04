@@ -16,7 +16,6 @@ module.exports.run = async (bot, message, args) => {
             .addField("Quem reportou:", `${message.author} | ${message.author.id}`)
             .addField("Data:", message.createdAt)
             .addField("Motivo:", rreason);
-            .setFooter("Report - LokisBOT", rUser.displayAvatarURL)
         let reportschannel = message.guild.channels.find(`name`, "reports");
         if (!reportschannel) return message.channel.send("Não foi possível encontrar o canal #reports.");
 
