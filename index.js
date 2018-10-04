@@ -49,13 +49,22 @@ bot.on('guildMemberAdd', member => {
 
 bot.on("message", message => {
 
+      let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+  if(!prefixes[message.guild.id]){
+    prefixes[message.guild.id] = {
+      prefixes: ">!"
+    };
+ }
+
+ let prefix = prefixes[message.guild.id].prefixes
+    
   if(!message.guild) return;
   if (message.author.bot) return;
-  if (!message.content.startsWith(prefix.prefix)) return;
+  if (!message.content.startsWith(prefix)) return;
  //Anti-Comando errado
 
  let command = message.content.split(" ")[0];
- command = command.slice(prefix.prefix.length);
+ command = command.slice(prefix.length);
 
 
   let args = message.content.split(" ").slice(1);
