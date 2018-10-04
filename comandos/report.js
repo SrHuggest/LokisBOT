@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         //!report @ned this is the reason
 
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        if (!rUser) return message.channel.send("Você usou o comando incorretamente: use l!report @user (motivo)");
+        if (!rUser) return message.channel.send("Você usou o comando incorretamente: use >!report @user (motivo)");
         let rreason = args.join(" ").slice(22);
 
         let reportEmbed = new Discord.RichEmbed()
