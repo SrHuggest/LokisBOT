@@ -34,17 +34,17 @@ bot.on('guildMemberAdd', async member => {
 });
 
 bot.on('guildMemberAdd', member => {
-       let autorole = JSON.parse(fs.readFileSync("./comandos/autorole.json", "utf8"));
-       if (!autorole[member.guild.id]) {
-            autorole[member.guild.id] = {
-                autorole: config.autorole
-            };
-       }
-       var role = autorole[member.guild.id].role;
-       if (role === '0') return;
-       member.addRole(role);
-  
-  
+  let autorole = JSON.parse(fs.readFileSync("./comandos/autorole.json", "utf8"));
+  let config =  ("./autorole.json", "utf8");
+  if (!autorole[member.guild.id]) {
+       autorole[member.guild.id] = {
+           autorole: config.autorole
+       };
+  }
+  var role = autorole[member.guild.id].role;
+  if (role === '0') return;
+  member.addRole(role);
+
 });
 
 bot.on("message", message => {
