@@ -10,13 +10,13 @@ module.exports.run = async (bot, message, args) => {
         let rreason = args.join(" ").slice(22);
 
         let reportEmbed = new Discord.RichEmbed()
-            .setDescription("__PUNIDO__")
-            .setColor("#15f153")
-            .addField("USÚARIO REPORTADO:", `${rUser} ou id: ${rUser.id}`)
-            .addField("QUEM REPORTOU:", `${message.author} ou id: ${message.author.id}`)
-            .addField("DATA:", message.createdAt)
-            .addField("MOTIVO:", rreason);
-
+            .setAuthor("Report - Lokis", message.author.displayAvatarURL)
+            .setColor("RED")
+            .addField("Reportado:", `${rUser} | ${rUser.id}`)
+            .addField("Quem reportou:", `${message.author} | ${message.author.id}`)
+            .addField("Data:", message.createdAt)
+            .addField("Motivo:", rreason);
+            .setFooter("Report - LokisBOT", rUser.displayAvatarURL)
         let reportschannel = message.guild.channels.find(`name`, "reports");
         if (!reportschannel) return message.channel.send("Não foi possível encontrar o canal #reports.");
 
