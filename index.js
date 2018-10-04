@@ -34,7 +34,7 @@ bot.on('guildMemberAdd', async member => {
 });
 
 bot.on('guildMemberAdd', member => {
-       let autorole = JSON.parse(fs.readFileSync("./autorole.json", "utf8"));
+       let autorole = JSON.parse(fs.readFileSync("./comandos/autorole.json", "utf8"));
        if (!autorole[member.guild.id]) {
             autorole[member.guild.id] = {
                 autorole: config.autorole
