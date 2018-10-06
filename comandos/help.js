@@ -6,7 +6,7 @@ let embed = new Discord.RichEmbed()
   .setColor("#8e0000")
   .setTitle("ADMINISTRAÇÃO")
   .setThumbnail("https://images.emojiterra.com/google/android-pie/128px/1f6e1.png")
-  .setDescription("**>!ban** Banir um membro do server. \n **>!kick** Expulse um membro do server. \n **>!mute** Silencie um player.")
+  .setDescription("**>!ban** Banir um membro do server. \n **>!kick** Expulse um membro do server. \n **>!mute** Silencie um player. \n **>!autorole** Seta o cargo desejado a toda vez que uma pessoa entrar ja dar o cargo. \n **>!setprefix** Seta a prefix desejada")
 
 let embed2 = new Discord.RichEmbed()
   .setTitle("DIVERSÃO")
