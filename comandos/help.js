@@ -26,11 +26,18 @@ let embed4 = new Discord.RichEmbed()
   .setThumbnail("https://images.emojiterra.com/google/android-pie/128px/1f943.png")
   .setDescription("**>!tempo** Mostra as informações climaticas de uma cidade. \n **>!report** Reporte alguem pra staff. \n **>!youtube** Pesquise no youtube. \n **>!google** Pesquise no google. \n **>!steam** Pesquise na steam.")
 
+let embed5 = new Discord.RichEmbed()
+  .setColor("#c842f4")
+  .setTitle("Música")
+  .setThumbnail("https://banner2.kisspng.com/20180331/dhw/kisspng-emoji-musical-note-eighth-note-music-notes-5abf238f009d45.9677733615224759190025.jpg")
+  .setDescription("**>!play** Toca uma música. \n **>!skip** Pula a faixa tocando para a proxima da lista \n **>!stop** Para a faixa tocando no momento. \n **>!volume** Pode aumentar o volume da musica de 0 a 10. \n **>!np** Mostra o nome da musica tocando no momento \n **>!pause** Pausa a musica tocando. \n **>!resume** Volta a tocar a musica pausada. \n **>!repetir** Repete a musica tocando. \n **>!queue** Gera uma fila das musicas colocadas a tocar.")
+
   message.channel.send(`${message.author} **Enviei diretamente no seu privado.** :wink:`);
   hMember.send(embed);
   hMember.send(embed2);
   hMember.send(embed3);
   hMember.send(embed4);
+  hMember.send(embed5);
 }
 module.exports.help = {
     name: "help"
