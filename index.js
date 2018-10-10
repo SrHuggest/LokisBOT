@@ -54,6 +54,23 @@ bot.on("message", message => {
       prefixes: ">!"
     };
  }
+    
+if(message.content.includes('<@477239443237896192>')){
+var embedz = new Discord.RichEmbed()
+.setAuthor('Oi, perdidinho?')
+.setColor("#36393E")
+.setThumbnail(message.author.displayAvatarURL)
+.setDescription('Eu vi que você está meio perdido em prefixs, minha prefix é ``>!`` \n Para quais quer ajudas a mais entra em contato com a nossa central [Clicando aqui](https://discord.gg/Egf4dTk)')
+.setTimestamp()
+.setFooter('LokisBOT, Oficial bot.', bot.user.avatarURL)
+message.channel.send({embed : embedz})
+}
+if(message.channel.id == 478924346799161345) { 
+
+  message.react('👍')
+  message.react('👎')
+  message.react('🤔')
+}  
 
  let prefix = prefixes[message.guild.id].prefixes
     
