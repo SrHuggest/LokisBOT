@@ -1,5 +1,5 @@
 <p align="center">
-<img height="384" src="https://loritta.website/assets/img/loritta.png">
+<img height="384" src="https://lokisbot.weebly.com/uploads/1/1/6/9/116904908/editor/1538699090459.png?1538699668">
 <br>
 <a href="https://loritta.website"><img src="https://img.shields.io/badge/website-loritta-blue.svg"></a>
 <a href="https://perfectdreams.net/"><img src="https://perfectdreams.net/assets/img/perfectdreams_badge.png?v2"></a>
@@ -13,7 +13,7 @@
 <a href="https://twitter.com/intent/user?screen_name=MrPowerGamerBR"><img src="https://img.shields.io/twitter/follow/mrpowergamerbr.svg?style=social&label=Seguir%20MrPowerGamerBR"></a>
 <a href="https://perfectdreams.net/loja"><img src="https://img.shields.io/badge/donate-perfectdreams-00CE44.svg"></a>
 </p>
-<h1 align="center">💁 Loritta 💁</h1>
+<h1 align="center">💁 LokisBOT 💁</h1>
 <p align="center">
 <a href="https://discordbots.org/bot/297153970613387264?utm_source=widget">
   <img src="https://discordbots.org/api/widget/297153970613387264.png?test=123456" alt="Discord Bots" />
