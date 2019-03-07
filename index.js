@@ -5,12 +5,12 @@ const fs = require('fs');
 
 bot.on("ready", () => {
     let iniciar = new Discord.RichEmbed()
-        .setAuthor('FlashBOT - Status', `${bot.user.avatarURL}`)
+        .setAuthor('LokisBOT - Status', `${bot.user.avatarURL}`)
         .setDescription('Iniciado sem nenhum problema.')
         .addField('👱 Usuários',`${bot.users.size}`, true)
         .setFooter('LokisBOT © Todos os Direitos Reservados.')
         .addField('📁 Servidores',`${bot.guilds.size}`, true)
-        .setColor('0xbf18d1')
+        .setColor('#3b64a5')
 
         bot.channels.get('477245275300429825').send(iniciar)
     console.log(`Logado. `);
