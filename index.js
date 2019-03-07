@@ -3,14 +3,35 @@ const bot = new Discord.Client();
 const TOKEN = process.env.TOKEN
 const fs = require('fs');
 
-bot.on('ready', () => {
+bot.on("ready", () => {
+    let iniciar = new Discord.RichEmbed()
+        .setAuthor('FlashBOT - Status', `${bot.user.avatarURL}`)
+        .setDescription('Iniciado sem nenhum problema.')
+        .addField('👱 Usuários',`${bot.users.size}`, true)
+        .setFooter('LokisBOT © Todos os Direitos Reservados.')
+        .addField('📁 Servidores',`${bot.guilds.size}`, true)
+        .setColor('0xbf18d1')
 
-    console.log(`📡 Estou conectado a: ${bot.guilds.size} servidores, e ${bot.users.size} usuários.`)
-      let games = [`📡 >!help | ` + bot.guilds.size + ` servers e ` + bot.users.size + ` Usuários conectados no total`,
-        `🇧🇷 Lokis é um bot totalmente brasileiro.`, `😛 Me adicione em seu servidor >!invite`, `😘💰 Doe para mim em www.lokisbot.weebly.com`, `🤔 Precisando de ajuda? >!ajuda`];
-    setInterval(() => {
-        bot.user.setActivity(games[Math.floor(Math.random() * games.length)], { url: "https://twitch.tv/redstoneg4", type: "STREAMING" })
-    }, 20000);
+        bot.channels.get('477245275300429825').send(iniciar)
+    console.log(`Logado. `);
+    let s = [
+        { name: `Em atualização 2019.`, type: 'STREAMING', url: 'https://www.twitch.tv/nome' },
+        { name: `Na super atualização`, type: 'PLAYING', url: 'https://www.twitch.tv/nome' },
+        { name: `Meu criador contar historias`, type: 'LISTENING', url: 'https://www.twitch.tv/nome' },
+        { name: `Estou conectado a: ${bot.guilds.size} servidores, e ${bot.users.size} usuários`, type: 'STREAMING', url: 'https://www.twitch.tv/nome' },
+        { name: `Minha prefix e F!`, type: 'PLAYING', url: 'https://www.twitch.tv/nome' },
+        { name: `Me adicione: https://lokisbot.weebly.com/`, type: 'LISTENING', url: 'https://www.twitch.tv/nome' },
+        { name: `LokisBOT - Bot Totalmente Brasileiro`, type: 'WATCHING', url: 'https://www.twitch.tv/nome' }
+    ];
+    
+    function st() {
+        let rs = s[Math.floor(Math.random() * s.length)];
+        bot.user.setPresence({ game: rs });
+    }
+  
+    st();
+    setInterval(() => st(), 5000);  //10000 = 10Ms = 10 segundos
+  
 });
 
 bot.on('guildMemberAdd', async member => {
