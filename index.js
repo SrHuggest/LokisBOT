@@ -19,7 +19,7 @@ bot.on("ready", () => {
         { name: `Na super atualização`, type: 'PLAYING', url: 'https://www.twitch.tv/nome' },
         { name: `Meu criador contar historias`, type: 'LISTENING', url: 'https://www.twitch.tv/nome' },
         { name: `Estou conectado a: ${bot.guilds.size} servidores, e ${bot.users.size} usuários`, type: 'STREAMING', url: 'https://www.twitch.tv/nome' },
-        { name: `Minha prefix e F!`, type: 'PLAYING', url: 'https://www.twitch.tv/nome' },
+        { name: `Minha prefix e >!`, type: 'PLAYING', url: 'https://www.twitch.tv/nome' },
         { name: `Me adicione: https://lokisbot.weebly.com/`, type: 'LISTENING', url: 'https://www.twitch.tv/nome' },
         { name: `LokisBOT - Bot Totalmente Brasileiro`, type: 'WATCHING', url: 'https://www.twitch.tv/nome' }
     ];
