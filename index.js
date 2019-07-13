@@ -30,7 +30,7 @@ bot.on("ready", () => {
     }
   
     st();
-    setInterval(() => st(), 5000);  //10000 = 10Ms = 10 segundos
+    setInterval(() => st(), 10000);  //10000 = 10Ms = 10 segundos
   
 });
 
